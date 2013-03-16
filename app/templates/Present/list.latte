@@ -1,0 +1,7 @@
+{block content}
+<h1>Dostupné prezentace:</h1>
+<ul>
+{foreach $presentations as $presentation}
+	<li>{$presentation->getBasename()} [<a n:href="this, presentation => $presentation->getBasename()">spustit</a>] [<a n:href="this, presentation => $presentation->getBasename(), useMultiplex => true">multiplex</a>]</li>
+{/foreach}
+</ul>
